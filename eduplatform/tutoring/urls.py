@@ -1,6 +1,10 @@
-from django.urls import path
-from .views import TutoringSessionListView
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import TutoringSessionViewSet
+
+router = DefaultRouter()
+router.register(r'sessions', TutoringSessionViewSet)
 
 urlpatterns = [
-    path('', TutoringSessionListView.as_view(), name='tutoring-session-list'),
+    path('', include(router.urls)),
 ]

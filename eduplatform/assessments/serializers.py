@@ -4,11 +4,11 @@ from .models import Assessment, Question
 class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
-        fields = '__all__'
+        fields = ['id', 'assessment', 'text', 'answer']
 
 class AssessmentSerializer(serializers.ModelSerializer):
     questions = QuestionSerializer(many=True, read_only=True)
 
     class Meta:
         model = Assessment
-        fields = '__all__'
+        fields = ['id', 'title', 'description', 'questions']

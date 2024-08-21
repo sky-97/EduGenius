@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import TutorSession
+from .models import TutoringSession
 
-class TutorSessionSerializer(serializers.ModelSerializer):
+class TutoringSessionSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TutorSession
-        fields = ['id', 'user', 'subject', 'session_date', 'notes']
+        model = TutoringSession
+        fields = ['id', 'title', 'description', 'date']

@@ -1,7 +1,7 @@
-from rest_framework import serializers
+from rest_framework import viewsets
 from .models import TutoringSession
+from .serializers import TutoringSessionSerializer
 
-class TutoringSessionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = TutoringSession
-        fields = ('subject', 'tutor', 'student', 'scheduled_time')
+class TutoringSessionViewSet(viewsets.ModelViewSet):
+    queryset = TutoringSession.objects.all()
+    serializer_class = TutoringSessionSerializer
