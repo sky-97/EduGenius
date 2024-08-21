@@ -4,6 +4,10 @@
 
 This project is an AI-powered educational platform designed to enhance student engagement and improve learning outcomes. The platform integrates AI-driven tutoring, digital assessment tools, and features for both educators and students. Built with Django for the backend, the platform offers a robust, scalable, and secure environment for modern education.
 
+## Project Synopsis
+
+For a detailed synopsis of the project, please refer to the [Project Synopsis PDF](docs/Project_Synopsis.pdf).
+
 ## Features
 
 ### AI Tutor
