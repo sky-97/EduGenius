@@ -1,0 +1,6 @@
+<h1>Available Quizzes</h1>
+<ul>
+    {% for quiz in quizzes %}
+    <li><a href="{% url 'take_quiz' quiz.id %}">{{ quiz.title }}</a></li>
+    {% endfor %}
+</ul>
